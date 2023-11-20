@@ -1,0 +1,29 @@
+img{
+	height: 100px;
+	width: 100%;
+	background-color: #FFFFFF;
+}
+
+#fir {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 80px;
+    padding: 2px auto 2px auto;
+}
+table{
+    border: 1px solid #000000;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 20px;
+}
+th{
+    border: 1px solid #000000;
+}
+td{
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+}
+.item{
+    width: 130px;
+    display: inline-block;
+    margin-right: 10%;
+}
