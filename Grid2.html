@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Grid</title>
+    <style>
+    .container{
+        display: grid;
+        /* 1:1 == 2:2 == 3:3 -> 1fr:1fr == 2fr:2fr == 3fr:3fr 
+        These matters when there are number of different items like 1fr:2fr:3fr and so on... */
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(4, 2fr);
+        /* As we know grids are aligned in row by row. So, when number of grid items are larger like they cannot be hold in above
+        case like 4 rows 5 columns, then specifying width in fraction does not affect the result either 1fr, 2fr, 3fr, etc. 
+        If 0fraction then as we know height will be specified by template-rows or auto-rows */
+        /* grid-column-gap: 7rem;
+        grid-row-gap: 1rem; */
+        grid-gap: 1rem;
+        
+
+    }
+    .box{
+        border: 2px solid black;
+        background-color: rgb(228, 188, 228);
+        padding: 23px;
+        display: inline;
+        /* This is to span grids more easily */
+    }
+    .box:first-child{
+        /* grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3; */
+        grid-column: 1 / span 3;
+        grid-row: 1 / span 3;
+    }
+    #Child{
+        grid-column-start: 4;
+        grid-column-end: 5;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Item-1</div>
+        <div class="box">Item-2</div>
+        <div class="box">Item-3</div>
+        <div class="box">Item-4</div>
+        <div class="box">Item-5</div>
+        <div class="box">Item-6</div>
+        <div class="box">Item-7</div>
+        <div class="box">Item-8</div>
+        <div class="box">Item-9</div>
+        <div class="box">Item-10</div>
+        <div class="box" id = "Child">Item-11</div>
+        <div class="box">Item-12</div>
+        <div class="box">Item-13</div>
+        <div class="box">Item-14</div>
+        <div class="box">Item-15</div>
+        <div class="box">Item-16</div>
+        <div class="box">Item-17</div>
+        <div class="box">Item-18</div>
+        <div class="box">Item-19</div>
+        <div class="box">Item-20</div>
+        <div class="box">Item-21</div>
+        <div class="box">Item-22</div>
+        <div class="box">Item-23</div>
+        <div class="box">Item-24</div>
+        <div class="box">Item-25</div>
+        <div class="box">Item-26</div>
+        <div class="box">Item-27</div>
+        <div class="box">Item-28</div>
+        <div class="box">Item-29</div>
+        <div class="box">Item-30</div>
+        <div class="box">Item-31</div>
+        <div class="box">Item-32</div>
+        <div class="box">Item-33</div>
+        <div class="box">Item-34</div>
+        <div class="box">Item-35</div>
+        <div class="box">Item-36</div>
+        <div class="box">Item-37</div>
+        <div class="box">Item-38</div>
+        <div class="box">Item-39</div>
+        <div class="box">Item-40</div>
+        <div class="box">Item-41</div>
+        <div class="box">Item-42</div>
+        <div class="box">Item-43</div>
+        <div class="box">Item-44</div>
+        <div class="box">Item-45</div>
+        <div class="box">Item-46</div>
+        <div class="box">Item-47</div>
+        <div class="box">Item-48</div>
+        <div class="box">Item-49</div>
+        <div class="box">Item-50</div>
+    </div>
+</body>
+</html>

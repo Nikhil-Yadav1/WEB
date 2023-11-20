@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Font Family</title>
+    <style type="text/css">
+        body {
+            font-family: Georgia, Times, serif;
+            font-weight: bolder;
+            font-style: normal;
+            font-stretch: expanded;
+            letter-spacing: 0.5em;
+            word-spacing: 1.5em;
+        }
+
+        h1,
+        h2 {
+            font-family: Arial, Verdana, sans-serif, fantasy;
+            font-weight: 100;
+            font-style: italic;
+            font-stretch: extra-expanded;
+            font-size: 25px;
+            text-align: left;
+        }
+
+        .credits {
+            font-family: "Courier New", Courier, monospace;
+            font-weight: bold;
+            font-style: oblique;
+            font-stretch: ultra-condensed;
+            font-size: 100%;
+            text-align: right;
+        }
+
+        .intro {
+            font-family: 'Courier New', Courier, cursive;
+            font-stretch: condensed;
+            font-size: 2.1em;
+            /*em ex rem rex*/
+
+            text-align: justify;
+            text-indent: -850px;
+        }
+
+        a {
+            font-stretch: regular;
+            font-size: 8pt;
+            text-transform: capitalize;
+            text-transform: lowercase;
+            text-transform: uppercase;
+            text-transform: none;
+            text-transform: inherit;
+        }
+
+        div {
+            text-decoration: line-through;
+            text-decoration: overline;
+            text-decoration: underline;
+            text-decoration: none;
+            line-height: 3.1em;
+            text-align: center;
+        
+            text-indent: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Briards</h1>
+    <p class="credits">by Ivy Duckett</p>
+    <p class="intro">
+        The <a class="breed" href="http://en.wikipedia.org/wiki/Briard">briard</a>, or
+        berger de brie, is a large breed of dog traditionally used as a herder and guardian of sheep...</p>
+
+    <div>
+        <span class="none">none : </span> This removes any decoration already applied to the text. 
+        underline : This adds a line underneath thetext.
+        overline : This adds a line over the top ofthe text. line-through This adds a line through words.
+        blink : This animates the text to make it flash on and off (however this is generally frowned upon,
+         as it is considered rather annoying).
+        In this example, the credits have been underlined. Also, the name of the breed (which is a link) 
+         is not underlined, which it would be by default because it is a link.
+    </div>
+</body>
+
+</html>

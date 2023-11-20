@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Links to Different Websites</title>
+</head>
+
+<body>
+    <h1>Links to Different Websites</h1>
+    <ul>
+        <li><a href="javascript:void(0);" onclick="redirectToSection('https://www.example.com', 'section1')">Link to
+                Example.com Section 1</a></li>
+        <li><a href="javascript:void(0);" onclick="redirectToSection('https://www.anotherwebsite.com', 'section2')">Link
+                to AnotherWebsite.com Section 2</a></li>
+    </ul>
+
+    <script>
+        function redirectToSection(website, sectionId) {
+            window.open(website + '#' + sectionId, '_blank');
+        }
+    </script>
+</body>
+
+</html>
+
+<!-- 
+In this example:
+
+- We create links that call a JavaScript function when clicked.
+- The JavaScript function redirectToSection takes two parameters: the URL of the external website and the section ID.
+- When a link is clicked, it calls the function and opens the URL with the specified section ID in a new tab (using
+window.open).
+
+This approach allows you to create dynamic links that use JavaScript to navigate to specific sections on different
+websites. Make sure to replace the URL and section ID in the JavaScript function calls with the actual values you want
+to link to. -->

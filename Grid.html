@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Grid </title>
+    <style>
+        .grid {
+            display: grid;
+            /*Initialisation of Grid*/
+            /* Default -> there will be 10 rows each grid-item in each rows*/
+            grid-template-rows: 1fr 2fr 4fr;
+            /* Row1 = 1fraction    Row2 = 1fraction Row3 = 4fraction Other rows = auto = 1fracton default */
+            grid-auto-rows: 8fr;
+            /*Remainig Rows auto changed from 1fraction to 2fraction*/
+            /* grid-auto-columns */
+            grid-template-columns: repeat(4, 1fr);
+            /* By repeat() specifying width in fraction does not affect the result either 1fr, 2fr, 3fr, etc. 
+                If 0fraction then as we know height will be specified by template-rows or auto-rows*/
+            
+            /* Making grids in form of columns such that there will be 4 columns each of width 2fraction */
+            /* Template Row and Column properties are applicable simultaneously */
+            grid-gap: 1rem;
+            /*It specifies both row-gap column-gap simultaneously */
+            /*Gap between grids = 1rem*/
+            /* gap: 10px 15px -> row-gap = 10px column-gap = 15px */
+
+            /* 
+                justify -> HORIZONTAL
+                align -> VERTICAL
+            */
+
+            /* DEFAULT justify-items AND align-items ARE STRETCH */
+            /* justify-self AND align-self ARE SAME BUT APPLIED ON GRID ITEMS NOT CONTAINER CONTAINING
+                GRID-ITEMS*/
+            
+            /*justify-items: start;*/ /* start center end stretch */
+            /* Aligns all grid-items inside the grid container along inline row axis */
+            
+            /* align-items: start; */ /* start center end stretch */
+            /* Align grid-items along block columns axis */
+            
+
+            /* justify-content: end;  */ /* start center end stretch space-between space-around space-evenly */
+            /* Aligns the entire grid along inline row axis by adjusting space between around items */
+            
+            /* align-content: end; */ /* start center end stretch space-between space-around space-evenly */
+            /* Aligns the entire grid along block column axis. Similar to justify-content but for block axis */
+        }
+
+        .box {
+            background-color: red;
+            outline: 4px double black;
+            /* width: 100px;
+            height: 100px; */
+            /* It will be illogical to define width template in fractions and then redefining width of items */
+            
+            
+            /* justify-self: center; */
+            /* start center end stretch */
+            /* Aligns the specific grid item along the inline row axis overriding the the value of justify-items
+            for that item */
+            
+            /* align-self: center; */
+            /* start center end stretch space-between space-around space-evenly */
+            /* Aligns a specific grid item along the block column axis, overriding the the value of 
+            align-items for that item */
+
+            /* SHORTHAND for both above */
+            /* place-items: center; */
+        }
+
+        #ten {
+            justify-self: center;
+        }
+
+        .main{
+            display: grid;
+            grid-template-columns: 300px 300px 300px;
+
+            justify-content: center;
+            /* ALIGN THE BOXES TO CENTER */
+            /* align-content: space-around; *//*NOT WORKING*/
+
+            
+            gap: 5px 6px;
+        }
+        .content{
+            border: 3px solid darkblue;
+            background-color: greenyellow;
+            height: 100px;
+            margin: 20px;
+            /* padding-left: 99px;
+            padding-top: 20px;
+            padding-bottom: 20px; */
+
+            /* This acts on element containing the text not on the text */
+            /* position: relative;
+            top: 102%;
+            left: 50%; */
+            
+            /* ALIGN THE TEXTS TO CENTER */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* This acts on data/text      */
+        /* .item{
+            position: relative;
+            top: 50%;
+            left: 50%;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="grid">
+        <div class="box">This is box-1</div>
+        <div class="box">This is box-2</div>
+        <div class="box">This is box-3</div>
+        <div class="box">This is box-4</div>
+        <div class="box">This is box-5</div>
+        <div class="box">This is box-6</div>
+        <div class="box">This is box-7</div>
+        <div class="box">This is box-8</div>
+        <div class="box">This is box-9</div>
+        <div class="box" id="ten">This is box-10</div>
+        <div class="box">This is box-1</div>
+        <div class="box">This is box-2</div>
+        <div class="box">This is box-3</div>
+        <div class="box">This is box-4</div>
+        <div class="box">This is box-5</div>
+        <div class="box">This is box-6</div>
+        <div class="box">This is box-7</div>
+        <div class="box">This is box-8</div>
+        <div class="box">This is box-9</div>
+    </div>
+
+    <div class="main">
+        <div class="content">Item-1</div>
+        <div class="content">Item-2</div>
+        <div class="content">Item-3</div>
+        <div class="content">Item-4</div>
+        <div class="content">Item-5</div>
+        <div class="content">Item-6</div>
+        <div class="content">Item-7</div>
+        <div class="content"><div class="item">Item-1</div></div>
+        <div class="content"><div class="item">Item-2</div></div>
+        <div class="content"><div class="item">Item-3</div></div>
+        <div class="content"><div class="item">Item-4</div></div>
+        <div class="content"><div class="item">Item-5</div></div>
+        <div class="content"><div class="item">Item-6</div></div>
+        <div class="content"><div class="item">Item-7</div></div>
+    </div>
+</body>
+
+</html>

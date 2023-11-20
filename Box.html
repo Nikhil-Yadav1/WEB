@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box</title>
+    <style>
+        /*All directions applying attributes ::after    
+            attibute-direction-attributetype
+            border-top-style
+            directions are generally in order top right bottom left order
+            attributetype -> only a few
+            padding-top*/
+        div.box{
+            background-color: aqua;
+            height: 300px;
+            width: 300px;
+            border-width: 1px 2px 3px 4px;/*Must give border style to dispaly border with this attribute*/
+            text-align: center;/*justify left right*/
+        }
+        .box{
+            height: 75%;
+            width: 75%;
+            background-color: bisque;
+            border-width: 1px 2px 3px 4px;
+            border-style: solid;/*double dotted dashed groove ridge none/hidden*/
+            border-color: blueviolet;
+        }
+
+        p.one {
+            border: 4px double gold;
+            width: max-content;
+            padding: 20px;
+            box-shadow: 5px 5px 25px 10px green;
+        }
+        p.two {
+            border: 4px double gold;
+            width: max-content;
+            margin: 20px;
+            margin-top: 30px;
+            box-shadow: 0px 0px 15px 10px green;/*horiz vertic blur ShadowSpread*/
+        }
+        p.three {
+            border: 4px double gold;
+            width: max-content;
+            padding: 20px;
+            margin: 10px auto;/*Align center*/
+            box-shadow: inset -20x -20px 20px green;/*horiz vertic blur ShadowSpread*/
+        }
+        /* If a width is specified for a box, padding is added onto the width of the box.
+         If the width of a box is specified then the margin is added to the width of the box*/
+    
+        ul{
+            list-style-type: none;
+        }
+        li{
+            height: 500px;
+            width: 500px;
+            display: inline;/*block inline-block none*/
+            border: 2px solid blue;
+            border-image: url(IMG/Border-Image.png);
+        }
+        li.inco{
+            display: none;/*To fully hide*/
+        }
+        li.About{
+            visibility: hidden;/*visible*/
+        }
+        .baxa{
+            border: 2px solid darkorchid;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 15px;
+            border-bottom-left-radius: 25px;
+            border-top-left-radius: 30px;
+            
+        }
+        .item{
+            height: 300px;
+            width: 300px;
+            background-color: aqua;
+            border: 4px double black;
+            margin: 5px 10px 5px 0px;
+            display: inline;
+        }
+        .container{
+            height: 100px;
+            width: 400px;
+            border: 4px solid red;
+            background-color: blueviolet;
+            text-align: center;
+            margin: auto auto auto auto;
+            border-radius: 400px;/*800px will remain same*/
+        }
+        #item-1{
+            box-shadow: 0px 0px 15px white;
+        }
+        #item-2{
+            box-shadow: -25px 10px green;
+        }
+        #item-3{
+            box-shadow: -15px -10px pink;
+        }
+        #item-4{
+            box-shadow: inset -15px -10px pink;
+        }
+        #item-5{
+            box-shadow: -15px -10px 4px pink;
+        }
+    </style>
+</head>
+<body>
+    <p class="one">Hohner's "Clavinet" is essentially an electric clavichord.</p>
+    <p class="two">Hohner's "Clavinet" is essentially an electric clavichord.</p>
+    <p class="three">Hohner's "Clavinet" is essentially an electric clavichord.</p>
+    <div class="box">
+        <p class="box">The Moog company pioneered the commercial
+         manufacture of modular voltage-controlled 
+         analog synthesizer systems in the early 
+         1950s.</p>
+    </div>
+    <ul>
+        <li>Home</li>
+        <li>Shop</li>
+        <li class="inco">Coming Soon</li>
+        <li class="About">About</li>
+        <li>Contact Us</li>
+    </ul>
+    <div class="baxa">The Moog company pioneered the commercial manufacture of modular voltage-controlled analog synthesizer 
+    systems in the early. The Moog company pioneered the commercial manufacture of modular voltage-controlled analog synthesizer 
+    systems in the early. The Moog company pioneered the commercial manufacture of modular voltage-controlled analog synthesizer 
+    systems in the early. The Moog company pioneered the commercial manufacture of modular voltage-controlled analog synthesizer 
+    systems in the early. The Moog company pioneered the commercial manufacture of modular voltage-controlled analog synthesizer 
+    systems in the early. The Moog company pioneered the commercial manufacture of modular voltage-controlled analog synthesizer 
+    systems in the early</div>
+    <div></div>
+    <div class="container">
+        <div class="item" id="item-1">Item-1</div>
+        <div class="item" id="item-2">Item-2</div>
+        <div class="item" id="item-3">Item-3</div>
+        <div class="item" id="item-4">Item-4</div>
+        <div class="item" id="item-5">Item-5</div>
+    </div>
+</body>
+</html>

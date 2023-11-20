@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        #item-1 {
+            background-color: #abcdef;
+            color: #ff4000;
+            text-shadow: 3px 3px 3px #ff8000;
+            font-size: 200%;
+        }
+
+        #item-2 {
+            background-color: #abcdef;
+            color: #ff4000;
+            text-shadow: 3px 3px 0px #ff8000;
+            font-size: 200%;
+        }
+
+        #item-3 {
+            background-color: #abcdef;
+            color: #ff4000;
+            text-shadow: 3px 0px 0px #ff8000;
+            font-size: 200%;
+        }
+
+        #item-4 {
+            background-color: #abcdef;
+            color: #ff4000;
+            text-shadow: -3px -3px 0px #ff8000;
+            font-size: 200%;
+        }
+        .it:first-letter{
+            background-color: #abcdef;
+            color: #ff4000;
+            text-shadow: -3px -3px 0px #ff8000;
+            font-size: 200%;
+        }
+        .it:first-line{
+            background-color: #abcdef;
+            color: rgb(255, 0, 0);
+            text-shadow: -3px -3px 0px #ff8000;
+            font-size: 200%;
+            /*line-height: 5px;*/
+        }
+        a{
+            color: darkcyan;
+            text-decoration: none;
+        }
+        a:hover{
+            color: darkorange;
+        }
+        a:link{
+            color: lightgreen;
+        }
+        a:visited{
+            color: darkgreen;
+        }
+        a:active{
+            color: rgb(196, 18, 18);
+        }
+        #item-5{
+            min-width: 1px;
+            max-width: min-content;/*Maximum length of a word*/
+            /*max-width: max-content;*/
+            min-height: 1px;
+            max-height: 10px;
+            /*If content does not fit, next content overlap*/
+        }
+        .box{
+            min-width: 1px;
+            max-width: 200px;
+            min-height: 1px;
+            max-height: 50px;
+            overflow: hidden;
+            overflow: scroll;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="item-1">The Briard is known as heart wrapped of fur</p>
+    <p id="item-2">The Briard is known as heart wrapped of fur</p>
+    <p id="item-3">The Briard is known as heart wrapped of fur</p>
+    <p id="item-4">The Briard is known as heart wrapped of fur</p>
+    <p id="item-5">The Briard is known as heart wrapped of fur</p>
+    <p class="it">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum deserunt molestias nesciunt
+        odit, eligendi sunt vero porro? Eveniet ullam quos, possimus ut amet exercitationem fugiat adipisci 
+        inventore magni <a href="link">voluptatum aperiam!</a> </p>
+
+    <p class="box">The Moog company pioneered the commercial
+    manufacture of modular voltage-controlled 
+    analog synthesizer systems in the early 
+    1950s.</p>
+</body>
+
+</html>

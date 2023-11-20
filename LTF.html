@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LTF</title>
+    <style>
+        #item-1{
+            list-style-position: inside;
+            list-style-type: lower-greek;/*Default -> decimal*/
+            /*decimal decimal-leading-zero lower-alpha upper-alpha lower-greek lower-latin upper-latin
+            lower-roman upper-roman armenian georgian none*/
+        }
+        #item-2{
+            list-style-position: outside;
+            list-style-type: decimal-leading-zero;
+        }
+        #item-3{
+            list-style-type: lower-alpha;
+        }
+        #item-4{
+            list-style-type: none;
+        }
+        #item-5{
+            list-style-type: lower-latin;
+            /*list-style-image: url(IMG/Star.png);*/
+        }
+        ul{
+            list-style: inside square;
+            margin-left: 25px;
+        }
+        #item-6{
+            list-style-type: circle;
+            /*circle disc square none*/
+        }
+        #item-7{
+            list-style-type: none;
+        }
+        td {
+            border: 1px solid #0088dd;
+            padding: 15px;
+        }
+        
+        table.one {
+            width: 50px;
+            empty-cells: show;
+            border-spacing: 5px 20px;
+            display: inline-table;
+        }
+        table.two {
+            empty-cells: hide;
+            /*inherit -> when nested table*/
+            border-collapse: collapse;/*separate*/
+            display: inline;
+        }
+        input {
+            font-size: 120%;
+            color: #5a5854;
+            background-color: cornflowerblue;
+            border: 1px solid darkblue;
+            border-radius: 5px;
+            padding: 5px 5px 5px 30px;
+            background-repeat: no-repeat;
+            background-position: 8px 9px;
+            display: inline;
+            margin-bottom: 10px;
+            cursor: all-scroll;/*url(cursor.gif)*/
+            outline: red;
+        } 
+        input:focus {
+            background-color: #ffffff; 
+            border: 1px solid #b1e1e4;
+        } 
+        input#email { 
+            background-image: url("images/email.png");
+        } 
+        input#twitter { 
+            background-image: url("images/twitter.png");
+        } 
+        input#web {
+            background-image: url("images/web.png");
+        }
+        input#submit {
+            color: #444444;
+            text-shadow: 0px 1px 1px #ffffff;
+            border-bottom: 2px solid #b2b2b2;
+            background-color: #b9e4e3;
+        }
+        input#submit:hover {
+            color: #333333;
+            border: 1px solid #a4a4a4;
+            border-top: 2px solid #b2b2b2;
+            background-color: #a0dbc4;
+        }
+        fieldset {
+            width: 520px;
+            border: 184px double #dcdcdc;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: left;
+        }
+        legend {
+            background-color: #efefef;
+            border: 1px solid #dcdcdc;
+            border-radius: 10px;
+            padding: 10px 20px;
+            text-align: left;
+            text-transform: uppercase;
+        }
+        label{
+            display: inline;
+        }
+        
+    </style>
+</head>
+<body>
+    <ol>
+        <li id="item-1">Home</li>
+        <li id="item-2">Shop</li>
+        <li id="item-3">Coming Soon</li>
+        <li id="item-4">About Us</li>
+        <li id="item-5">FAQ</li>
+    </ol>
+    <ul>
+        <li id="item-6">Home</li>
+        <li id="item-7">Shop</li>
+        <li id="item-8">Coming Soon</li>
+        <li id="item-9">About Us</li>
+        <li id="item-10">FAQ</li>
+    </ul>
+    <div class="tab">
+        <table class="one">
+            <tr>
+            <td>1</td>
+            <td>2</td>
+            </tr>
+            <tr>
+            <td>3</td>
+            <td></td>
+            </tr>
+        </table>
+        <table class="two">
+            <tr>
+            <td>1</td>
+            <td>2</td>
+            </tr>
+            <tr>
+            <td>3</td>
+            <td></td>
+            </tr>
+        </table>
+    </div>
+    <form action="example.php" method="post">
+        <fieldset>
+            <legend>Form</legend>
+            <div><label for="name" class="title">Name:</label>
+            <input type="text" id="name" name="name" /></div>
+            <div><label for="email" class="title">Email:</label>
+            <input type="email" id="email" name="email" /></div>
+            <div><span class="title">Gender:</span>
+            <input type="radio" name="gender" id="male" value="M" />
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female" value="F" />
+            <label for="female">Female</label><br /></div>
+            <div><input type="submit" value="Register" id="submit" /></div>
+        </fieldset>
+    </form>
+</body>
+</html>
