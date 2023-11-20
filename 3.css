@@ -1,0 +1,37 @@
+img{
+	height: 100%;
+	width: 100%;
+	background-color: #FFFFFF;	
+}
+
+#fir {
+    background-color : rgb(222, 125, 6);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 80px;
+    padding: 2px auto 2px auto;
+}
+
+#sec {
+    background-color: rgba(245, 157, 15, 0.783);
+}
+
+table{
+    border: 1px solid #000000;
+    border-collapse: collapse;
+    width: 100%;
+}
+th{
+    border: 1px solid #000000;
+}
+td{
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+}
+#r{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 80px;
+  padding: 2px auto 2px auto;
+}
+body{
+    font-size: 30px;
+}
